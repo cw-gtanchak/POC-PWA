@@ -4,6 +4,7 @@ import * as Sentry from '@sentry/react';
 import { Integrations } from '@sentry/tracing';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
+import './style.css';
 
 // webfonts
 import '@azaVista/shared/fonts/inter/inter.css';

@@ -5,7 +5,7 @@ import Home from './pages/Home';
 function Routes() {
   return (
     <Switch>
-      <Route path="/login" exact>
+      <Route path="/schedule" exact>
         <Home />
       </Route>
 

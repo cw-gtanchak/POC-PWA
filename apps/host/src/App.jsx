@@ -6,8 +6,8 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Provider from './provider';
 
 const HostApp = React.lazy(() => import('./routes'));
-const LoginApp = React.lazy(() => import('@azaVista/login'));
-const EndressApp = React.lazy(() => import('@azaVista/endress'));
+const ScheduleApp = React.lazy(() => import('@azaVista/schedule'));
+const FeedsApp = React.lazy(() => import('@azaVista/feeds'));
 
 function DefaultFallback({ children, fallback }) {
   return (
@@ -19,26 +19,27 @@ function DefaultFallback({ children, fallback }) {
 
 function Apps() {
   return (
-    <Switch>
-      {/* Applications */}
-      <Route path="/login">
-        <DefaultFallback>
-          <LoginApp />
-        </DefaultFallback>
-      </Route>
+    <>
+      <Switch>
+        <Route path="/feeds">
+          <DefaultFallback>
+            <FeedsApp />
+          </DefaultFallback>
+        </Route>
 
-      <Route path="/endress">
-        <DefaultFallback>
-          <EndressApp />
-        </DefaultFallback>
-      </Route>
+        <Route path="/schedule">
+          <DefaultFallback>
+            <ScheduleApp />
+          </DefaultFallback>
+        </Route>
 
-      <Route path="/">
-        <DefaultFallback>
-          <HostApp />
-        </DefaultFallback>
-      </Route>
-    </Switch>
+        <Route path="/">
+          <DefaultFallback>
+            <HostApp />
+          </DefaultFallback>
+        </Route>
+      </Switch>
+    </>
   );
 }
 

@@ -1,31 +1,30 @@
 {
-  "name": "@azaVista/login",
+  "name": "@azaVista/feeds",
   "version": "0.1.0",
-  "author": "Aaron Agarunov",
+  "author": "",
   "type": "module",
   "main": "dist/App.cjs",
   "module": "dist/App.js",
-  "types": "./dist/App.d.ts",
   "exports": {
     ".": {
-      "development": "./src/App.tsx",
+      "development": "./src/App.jsx",
       "require": "./dist/App.cjs",
       "import": "./dist/App.js"
     }
   },
   "files": [
     "dist",
-    "src",
-    "test"
+    "src"
   ],
   "scripts": {
+    "build": "vite build",
     "test": "vitest"
   },
   "dependencies": {
+    "@azaVista/posts-ui": "workspace:*",
     "@azaVista/shared": "workspace:*",
     "@azaVista/shell": "workspace:*"
   },
-  "devDependencies": {},
   "peerDependencies": {
     "@mui/icons-material": "5.x",
     "@mui/material": "5.x",

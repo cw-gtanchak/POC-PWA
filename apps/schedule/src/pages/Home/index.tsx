@@ -6,6 +6,7 @@ function Home() {
   return (
     <Shell>
       <Box p={2}>
+        <h1 className="text-white">asdfasdf</h1>
         <Typography>
           This is the MyOrg Login Homepage from <code>@myorg/login</code>.
         </Typography>

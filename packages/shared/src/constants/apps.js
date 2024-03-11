@@ -6,17 +6,17 @@ import PeopleAltIcon from '@mui/icons-material/PeopleAlt';
 
 const apps = [
   {
-    href: '/posts',
+    href: '/feeds',
     icon: PeopleAltIcon,
-    description: 'MyOrg Posts',
+    description: 'Feeds',
     color: '#c1d2fb',
     contactEmail: 'noreply@myorg.com',
     tags: ['general']
   },
   {
-    href: '/login',
+    href: '/schedule',
     icon: HelpIcon,
-    description: 'MyOrg Login',
+    description: 'Schedule',
     color: '#ffffff',
     contactEmail: 'hi@agarun.com'
   }
