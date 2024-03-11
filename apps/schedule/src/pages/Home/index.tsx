@@ -1,19 +1,18 @@
 import Shell from '@azaVista/shell';
-import { Box, Typography } from '@mui/material';
-import { Link } from 'react-router-dom';
+import {
+  BottomNavigation,
+  BottomNavigationAction,
+  Paper,
+  Stack
+} from '@mui/material';
+import { useEffect, useState } from 'react';
+import React from 'react';
+
+import { fetchPermissions, fetchTheme } from './utils';
+import { useAuth } from '@azaVista/shared';
 
 function Home() {
-  return (
-    <Shell>
-      <Box p={2}>
-        <h1 className="text-white">asdfasdf</h1>
-        <Typography>
-          This is the MyOrg Login Homepage from <code>@myorg/login</code>.
-        </Typography>
-        <Link to="/">Click to go back home.</Link>
-      </Box>
-    </Shell>
-  );
+  return <>From schedule APP</>;
 }
 
 export default Home;

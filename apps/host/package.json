@@ -14,6 +14,10 @@
   "dependencies": {
     "@azaVista/schedule": "workspace:*",
     "@azaVista/feeds": "workspace:*",
+    "@azaVista/feed": "workspace:*",
+    "@azaVista/people": "workspace:*",
+    "@azaVista/profile": "workspace:*",
+    "@azaVista/meets": "workspace:*",
     "@azaVista/shared": "workspace:*",
     "@azaVista/shell": "workspace:*",
     "@sentry/react": "^7.24.2",

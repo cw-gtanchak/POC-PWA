@@ -1,0 +1,50 @@
+{
+  "permissions": [
+    {
+      "id": "1",
+      "modules": ["schedule", "feed", "meets", "people", "profile"]
+    },
+    {
+      "id": "2",
+      "modules": ["profile", "feed", "schedule"]
+    },
+    {
+      "id": "3",
+      "modules": ["profile", "feed", "people", "meets"]
+    },
+    {
+      "id": "4",
+      "modules": ["schedule", "feed", "profile"]
+    }
+  ],
+  "theme": [
+    {
+      "id": "1",
+      "theme": {}
+    },
+    {
+      "id": "2",
+      "theme": {
+        "colors": {
+          "primary": "red"
+        }
+      }
+    },
+    {
+      "id": "3",
+      "theme": {
+        "colors": {
+          "primary": "red"
+        }
+      }
+    },
+    {
+      "id": "4",
+      "theme": {
+        "colors": {
+          "primary": "red"
+        }
+      }
+    }
+  ]
+}

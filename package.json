@@ -20,7 +20,7 @@
     "changeset-save": "pnpm exec changeset version",
     "changeset-tag": "pnpm exec changeset tag",
     "changeset-tag-and-publish": "pnpm exec changeset publish",
-    "clean:node_modules": "node clean-node-modules.js"
+    "cleann": "node clean-node-modules.js"
   },
   "keywords": [],
   "author": "",
@@ -32,6 +32,7 @@
     "@mui/material": "^5.10.17",
     "@mui/styles": "^5.11.0",
     "@vitejs/plugin-react-swc": "^3.0.0",
+    "axios": "^1.6.7",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^5.3.4",

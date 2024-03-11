@@ -4,10 +4,14 @@ import { theme } from '@azaVista/shared';
 import { Helmet } from 'react-helmet';
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Provider from './provider';
+import Shell from '@azaVista/shell';
 
 const HostApp = React.lazy(() => import('./routes'));
 const ScheduleApp = React.lazy(() => import('@azaVista/schedule'));
-const FeedsApp = React.lazy(() => import('@azaVista/feeds'));
+const FeedApp = React.lazy(() => import('@azaVista/feed'));
+const ProfileApp = React.lazy(() => import('@azaVista/profile'));
+const MeetApp = React.lazy(() => import('@azaVista/meets'));
+const PeopleApp = React.lazy(() => import('@azaVista/people'));
 
 function DefaultFallback({ children, fallback }) {
   return (
@@ -21,9 +25,9 @@ function Apps() {
   return (
     <>
       <Switch>
-        <Route path="/feeds">
+        <Route path="/feed">
           <DefaultFallback>
-            <FeedsApp />
+            <FeedApp />
           </DefaultFallback>
         </Route>
 
@@ -33,9 +37,28 @@ function Apps() {
           </DefaultFallback>
         </Route>
 
+        <Route path="/profile">
+          <DefaultFallback>
+            <ProfileApp />
+          </DefaultFallback>
+        </Route>
+
+        <Route path="/people">
+          <DefaultFallback>
+            <PeopleApp />
+          </DefaultFallback>
+        </Route>
+
+        <Route path="/meets">
+          <DefaultFallback>
+            <MeetApp />
+          </DefaultFallback>
+        </Route>
+
         <Route path="/">
           <DefaultFallback>
-            <HostApp />
+            {/* <HostApp /> */}
+            <>dummy</>
           </DefaultFallback>
         </Route>
       </Switch>
@@ -59,7 +82,9 @@ function App() {
           <meta name="theme-color" content={theme.palette.primary.main} />
         </Helmet>
         <BrowserRouter basename={process.env.BASE_URL || '/'}>
-          <Apps />
+          <Shell>
+            <Apps />
+          </Shell>
         </BrowserRouter>
       </Provider>
     </>

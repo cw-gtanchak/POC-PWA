@@ -5,10 +5,12 @@ import Home from './pages/Home';
 function Routes() {
   return (
     <Switch>
-      <Route path="/schedule" exact>
+      <Route path="/schedule">
         <Home />
       </Route>
-
+      <Route path="/schedule">
+        <Home />
+      </Route>
       <Redirect to="/404" />
     </Switch>
   );

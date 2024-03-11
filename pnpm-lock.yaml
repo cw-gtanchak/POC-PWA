@@ -29,6 +29,9 @@ importers:
       '@vitejs/plugin-react-swc':
         specifier: ^3.0.0
         version: 3.6.0(vite@4.5.2)
+      axios:
+        specifier: ^1.6.7
+        version: 1.6.7
       react:
         specifier: ^18.2.0
         version: 18.2.0
@@ -97,6 +100,57 @@ importers:
         specifier: ^0.25.8
         version: 0.25.8(jsdom@24.0.0)
 
+  apps/feed:
+    dependencies:
+      '@azaVista/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      '@azaVista/shell':
+        specifier: workspace:*
+        version: link:../../packages/shell
+      '@mui/icons-material':
+        specifier: 5.x
+        version: 5.15.12(@mui/material@5.15.12)(@types/react@18.2.64)(react@18.2.0)
+      '@mui/material':
+        specifier: 5.x
+        version: 5.15.12(@emotion/react@11.11.4)(@emotion/styled@11.11.0)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/styles':
+        specifier: 5.x
+        version: 5.15.12(@types/react@18.2.64)(react@18.2.0)
+      '@types/node':
+        specifier: '*'
+        version: 18.19.22
+      '@types/react':
+        specifier: '*'
+        version: 18.2.64
+      '@types/react-dom':
+        specifier: '*'
+        version: 18.2.21
+      '@vitejs/plugin-react-swc':
+        specifier: 3.x
+        version: 3.6.0(vite@4.5.2)
+      config:
+        specifier: workspace:*
+        version: link:../../packages/config
+      react:
+        specifier: 18.x
+        version: 18.2.0
+      react-dom:
+        specifier: 18.x
+        version: 18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 5.x
+        version: 5.3.4(react@18.2.0)
+      typescript:
+        specifier: 4.x
+        version: 4.9.5
+      vite:
+        specifier: 4.x
+        version: 4.5.2(@types/node@18.19.22)
+      vitest:
+        specifier: '*'
+        version: 0.25.8(jsdom@24.0.0)
+
   apps/feeds:
     dependencies:
       '@azaVista/posts-ui':
@@ -150,9 +204,21 @@ importers:
 
   apps/host:
     dependencies:
+      '@azaVista/feed':
+        specifier: workspace:*
+        version: link:../feed
       '@azaVista/feeds':
         specifier: workspace:*
         version: link:../feeds
+      '@azaVista/meets':
+        specifier: workspace:*
+        version: link:../meets
+      '@azaVista/people':
+        specifier: workspace:*
+        version: link:../people
+      '@azaVista/profile':
+        specifier: workspace:*
+        version: link:../profile
       '@azaVista/schedule':
         specifier: workspace:*
         version: link:../schedule
@@ -220,6 +286,159 @@ importers:
       vite-plugin-sentry:
         specifier: ^1.1.7
         version: 1.4.0(vite@4.5.2)
+
+  apps/meets:
+    dependencies:
+      '@azaVista/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      '@azaVista/shell':
+        specifier: workspace:*
+        version: link:../../packages/shell
+      '@mui/icons-material':
+        specifier: 5.x
+        version: 5.15.12(@mui/material@5.15.12)(@types/react@18.2.64)(react@18.2.0)
+      '@mui/material':
+        specifier: 5.x
+        version: 5.15.12(@emotion/react@11.11.4)(@emotion/styled@11.11.0)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/styles':
+        specifier: 5.x
+        version: 5.15.12(@types/react@18.2.64)(react@18.2.0)
+      '@types/node':
+        specifier: '*'
+        version: 18.19.22
+      '@types/react':
+        specifier: '*'
+        version: 18.2.64
+      '@types/react-dom':
+        specifier: '*'
+        version: 18.2.21
+      '@vitejs/plugin-react-swc':
+        specifier: 3.x
+        version: 3.6.0(vite@4.5.2)
+      config:
+        specifier: workspace:*
+        version: link:../../packages/config
+      react:
+        specifier: 18.x
+        version: 18.2.0
+      react-dom:
+        specifier: 18.x
+        version: 18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 5.x
+        version: 5.3.4(react@18.2.0)
+      typescript:
+        specifier: 4.x
+        version: 4.9.5
+      vite:
+        specifier: 4.x
+        version: 4.5.2(@types/node@18.19.22)
+      vitest:
+        specifier: '*'
+        version: 0.25.8(jsdom@24.0.0)
+
+  apps/people:
+    dependencies:
+      '@azaVista/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      '@azaVista/shell':
+        specifier: workspace:*
+        version: link:../../packages/shell
+      '@mui/icons-material':
+        specifier: 5.x
+        version: 5.15.12(@mui/material@5.15.12)(@types/react@18.2.64)(react@18.2.0)
+      '@mui/material':
+        specifier: 5.x
+        version: 5.15.12(@emotion/react@11.11.4)(@emotion/styled@11.11.0)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/styles':
+        specifier: 5.x
+        version: 5.15.12(@types/react@18.2.64)(react@18.2.0)
+      '@types/node':
+        specifier: '*'
+        version: 18.19.22
+      '@types/react':
+        specifier: '*'
+        version: 18.2.64
+      '@types/react-dom':
+        specifier: '*'
+        version: 18.2.21
+      '@vitejs/plugin-react-swc':
+        specifier: 3.x
+        version: 3.6.0(vite@4.5.2)
+      config:
+        specifier: workspace:*
+        version: link:../../packages/config
+      react:
+        specifier: 18.x
+        version: 18.2.0
+      react-dom:
+        specifier: 18.x
+        version: 18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 5.x
+        version: 5.3.4(react@18.2.0)
+      typescript:
+        specifier: 4.x
+        version: 4.9.5
+      vite:
+        specifier: 4.x
+        version: 4.5.2(@types/node@18.19.22)
+      vitest:
+        specifier: '*'
+        version: 0.25.8(jsdom@24.0.0)
+
+  apps/profile:
+    dependencies:
+      '@azaVista/shared':
+        specifier: workspace:*
+        version: link:../../packages/shared
+      '@azaVista/shell':
+        specifier: workspace:*
+        version: link:../../packages/shell
+      '@mui/icons-material':
+        specifier: 5.x
+        version: 5.15.12(@mui/material@5.15.12)(@types/react@18.2.64)(react@18.2.0)
+      '@mui/material':
+        specifier: 5.x
+        version: 5.15.12(@emotion/react@11.11.4)(@emotion/styled@11.11.0)(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)
+      '@mui/styles':
+        specifier: 5.x
+        version: 5.15.12(@types/react@18.2.64)(react@18.2.0)
+      '@types/node':
+        specifier: '*'
+        version: 18.19.22
+      '@types/react':
+        specifier: '*'
+        version: 18.2.64
+      '@types/react-dom':
+        specifier: '*'
+        version: 18.2.21
+      '@vitejs/plugin-react-swc':
+        specifier: 3.x
+        version: 3.6.0(vite@4.5.2)
+      config:
+        specifier: workspace:*
+        version: link:../../packages/config
+      react:
+        specifier: 18.x
+        version: 18.2.0
+      react-dom:
+        specifier: 18.x
+        version: 18.2.0(react@18.2.0)
+      react-router-dom:
+        specifier: 5.x
+        version: 5.3.4(react@18.2.0)
+      typescript:
+        specifier: 4.x
+        version: 4.9.5
+      vite:
+        specifier: 4.x
+        version: 4.5.2(@types/node@18.19.22)
+      vitest:
+        specifier: '*'
+        version: 0.25.8(jsdom@24.0.0)
 
   apps/schedule:
     dependencies:
@@ -3812,6 +4031,16 @@ packages:
     engines: {node: '>=4'}
     dev: false
 
+  /axios@1.6.7:
+    resolution: {integrity: sha512-/hDJGff6/c7u0hDkvkGxR/oy6CbCs8ziCsC7SqmhjfozqiJGc8Z11wrv9z9lYfY4K8l+H9TpjcMDX0xOZmx+RA==}
+    dependencies:
+      follow-redirects: 1.15.5
+      form-data: 4.0.0
+      proxy-from-env: 1.1.0
+    transitivePeerDependencies:
+      - debug
+    dev: false
+
   /axobject-query@3.2.1:
     resolution: {integrity: sha512-jsyHu61e6N4Vbz/v18DHwWYKK0bSWLqn47eeDSKPB7m8tqMHF9YJ+mhIk2lVteyZrY8tnSj/jHOv4YiTCuCJgg==}
     dependencies:
@@ -5250,6 +5479,16 @@ packages:
 
   /flatted@3.3.1:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
+    dev: false
+
+  /follow-redirects@1.15.5:
+    resolution: {integrity: sha512-vSFWUON1B+yAw1VN4xMfxgn5fTUiaOzAJCKBwIIgT/+7CuGy9+r+5gITvP62j3RmaD5Ph65UaERdOSRGUzZtgw==}
+    engines: {node: '>=4.0'}
+    peerDependencies:
+      debug: '*'
+    peerDependenciesMeta:
+      debug:
+        optional: true
     dev: false
 
   /for-each@0.3.3:
@@ -7199,7 +7438,6 @@ packages:
 
   /proxy-from-env@1.1.0:
     resolution: {integrity: sha512-D+zkORCbA9f1tdWRK0RaCR3GPv50cMxcrz4X8k5LTSUD1Dkw47mKJEZQNunItRTkWwgtaUSo1RVFRIG9ZXiFYg==}
-    dev: true
 
   /pseudomap@1.0.2:
     resolution: {integrity: sha512-b/YwNhb8lk1Zz2+bXXpS/LK9OisiZZ1SNsSLxN1x2OXVEhW2Ckr/7mWE5vrC1ZTiJlD9g19jWszTmJsB+oEpFQ==}

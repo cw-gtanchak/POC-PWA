@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <Dashboard>
       <Box p={2}>
-        {apps.map(app => (
+        {/* {apps.map(app => (
           <Link
             key={app.description}
             to={app.href}
@@ -21,7 +21,7 @@ export default function Home() {
               </Typography>
             </Card>
           </Link>
-        ))}
+        ))} */}
       </Box>
     </Dashboard>
   );
