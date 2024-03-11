@@ -21,6 +21,7 @@ import { useStyles } from './styles';
 import React, { ReactNode, useEffect, useState } from 'react';
 import { useAuth } from '@azaVista/shared';
 import { fetchPermissions, fetchTheme } from './utils';
+import { useTheme } from '@emotion/react';
 
 const companies = ['Company1', 'Company2', 'Company3', 'Company4'];
 
@@ -102,7 +103,7 @@ export default function Header() {
         direction={'row'}
         justifyContent={'space-between'}
         alignItems={'center'}
-        sx={{ backgroundColor: 'gray', height: 80, px: 3 }}
+        sx={{ backgroundColor: 'white', height: 80, px: 3 }}
       >
         <Box>
           <IconButton
@@ -144,19 +145,26 @@ export default function Header() {
 }
 
 export function Dashboard({ children }: { children: ReactNode }) {
-  const classes = useStyles();
-
-  const { theme, permissions } = useAuth() as any;
+  const theme = useTheme();
+  // const classes = useStyles(theme);
+  const { permissions } = useAuth() as any;
   const [value, setValue] = React.useState(0);
   const ref = React.useRef<HTMLDivElement>(null);
   const history = useHistory();
-  console.log('valuevaluevalue', value);
+
+  console.log(theme, 'new theme');
+
   return (
-    <Box>
+    <Box
+      sx={{
+        background: theme.palette.primary.main,
+        height: `calc(100vh - ${64}px)`
+      }}
+    >
       <Header />
-      <main role="main" className={classes.main}>
+      <Box role="main" sx={{ height: '100%' }}>
         {children}
-      </main>
+      </Box>
       <Paper
         sx={{ position: 'fixed', bottom: 0, left: 0, right: 0 }}
         elevation={3}

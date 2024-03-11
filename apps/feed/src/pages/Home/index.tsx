@@ -14,7 +14,9 @@ import { useAuth } from '@azaVista/shared';
 function Home() {
   return (
     <Stack justifyContent={'center'} alignItems={'center'} height={'100%'}>
-      <h1 style={{ fontSize: 30 }}>From Feed APP</h1>
+      <h1 style={{ fontSize: 30 }} color="primary">
+        From Feed APP
+      </h1>
     </Stack>
   );
 }

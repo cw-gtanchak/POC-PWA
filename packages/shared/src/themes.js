@@ -1,15 +1,13 @@
 import { createTheme } from '@mui/material/styles';
 import { purple, grey } from '@mui/material/colors';
 
-export const theme = createTheme({
+export const theme = {
   palette: {
-    primary: purple,
-    secondary: grey,
-    text: {
-      primary: 'rgba(0, 0, 0, 0.87)',
-      secondary: 'rgba(0, 0, 0, 0.54)',
-      disabled: 'rgba(0, 0, 0, 0.38)',
-      hint: 'rgba(0, 0, 0, 0.38)'
+    primary: {
+      main: '#ff6600'
+    },
+    secondary: {
+      main: '#000000'
     }
   },
 
@@ -29,4 +27,4 @@ export const theme = createTheme({
       main: '#737373'
     }
   }
-});
+};

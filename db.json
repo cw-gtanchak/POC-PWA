@@ -20,29 +20,53 @@
   "theme": [
     {
       "id": "1",
-      "theme": {}
+      "theme": {
+        "palette": {
+          "primary": {
+            "main": "#1976d2"
+          },
+          "secondary": {
+            "main": "#f44336"
+          }
+        }
+      }
     },
     {
       "id": "2",
       "theme": {
-        "colors": {
-          "primary": "red"
+        "palette": {
+          "primary": {
+            "main": "#4caf50"
+          },
+          "secondary": {
+            "main": "#ff9800"
+          }
         }
       }
     },
     {
       "id": "3",
       "theme": {
-        "colors": {
-          "primary": "red"
+        "palette": {
+          "primary": {
+            "main": "#9c27b0"
+          },
+          "secondary": {
+            "main": "#ffeb3b"
+          }
         }
       }
     },
     {
       "id": "4",
       "theme": {
-        "colors": {
-          "primary": "red"
+        "palette": {
+          "primary": {
+            "main": "#e91e63"
+          },
+          "secondary": {
+            "main": "#795548"
+          }
         }
       }
     }
