@@ -6,9 +6,8 @@ import { Link } from 'react-router-dom';
 
 export default function Home() {
   return (
-    <Dashboard>
-      <Box p={2}>
-        {/* {apps.map(app => (
+    <Box p={2}>
+      {/* {apps.map(app => (
           <Link
             key={app.description}
             to={app.href}
@@ -22,7 +21,6 @@ export default function Home() {
             </Card>
           </Link>
         ))} */}
-      </Box>
-    </Dashboard>
+    </Box>
   );
 }

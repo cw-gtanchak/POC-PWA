@@ -14,11 +14,7 @@ const MeetApp = React.lazy(() => import('@azaVista/meets'));
 const PeopleApp = React.lazy(() => import('@azaVista/people'));
 
 function DefaultFallback({ children, fallback }) {
-  return (
-    <React.Suspense fallback={fallback || <Dashboard />}>
-      {children}
-    </React.Suspense>
-  );
+  return <React.Suspense fallback={fallback}>{children}</React.Suspense>;
 }
 
 function Apps() {
@@ -58,7 +54,8 @@ function Apps() {
         <Route path="/">
           <DefaultFallback>
             {/* <HostApp /> */}
-            <>dummy</>
+            {/* <>dummy</> */}
+            <ScheduleApp />
           </DefaultFallback>
         </Route>
       </Switch>
